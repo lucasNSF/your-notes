@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Notes ✅</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/media.css" />
+
+    <!-- Scripts -->
+    <script src="js/theme.js" type="module" defer></script>
+    <script src="js/main.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7ed22bcdfc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="title">
+        <div class="logo">
+          <h1>Your Notes</h1>
+          <i class="fa-solid fa-book"></i>
+        </div>
+
+        <div class="theme-area">
+          <i class="fa-solid fa-moon"></i>
+          <input class="theme-btn" type="checkbox" name="theme" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Main container -->
+      <section class="main-container">
+        <!-- Add note section -->
+        <div class="add-note-container">
+          <button class="add-note">Add note</button>
+        </div>
+
+        <!-- Note area -->
+        <section class="note-area"></section>
+      </section>
+    </main>
+
+    <!-- Add note modal -->
+    <section class="add-note-modal">
+      <!-- Note title -->
+      <section class="note-title">
+        <input
+          type="text"
+          placeholder="Note title here!"
+          id="note-title"
+          required
+        />
+        <div class="action-buttons">
+          <i class="fa-solid fa-palette" id="color-pallets"></i>
+          <i class="fa-solid fa-xmark" id="close-modal"></i>
+        </div>
+      </section>
+
+      <!-- To-do list -->
+      <section class="modal-todo-list">
+        <div class="modal-create-todo">
+          <i class="fa-solid fa-square-plus" id="add-todo"></i>
+          <p>Add</p>
+        </div>
+
+        <div class="modal-todo-area"></div>
+
+        <button class="save-note">Save</button>
+      </section>
+    </section>
+
+    <!-- Color pallets modal -->
+    <section class="color-pallets">
+      <div class="pallet" id="blue"></div>
+      <div class="pallet" id="green"></div>
+      <div class="pallet" id="yellow"></div>
+      <div class="pallet" id="red"></div>
+      <div class="pallet" id="purple"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Follow me on my Social Medias:</p>
+      <ul>
+        <li>
+          <a href="https://github.com/lucasNSF"><i class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/lucas-nascimento-devweb/"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/luccass.n/"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

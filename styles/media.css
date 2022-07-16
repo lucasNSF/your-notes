@@ -1,0 +1,96 @@
+@media screen and (max-width: 1000px) {
+  .add-note-modal {
+    left: 28vw;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .note-area {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .add-note-modal {
+    left: 20vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .add-note-modal {
+    left: 15%;
+  }
+
+  .title {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .title {
+    margin-left: 0;
+  }
+
+  button.add-note {
+    margin-left: 0;
+  }
+
+  .add-note-modal {
+    top: 35%;
+    left: 15%;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .title {
+    flex-direction: column;
+  }
+
+  .theme-area {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 10%;
+  }
+
+  .add-note-modal {
+    width: 300px;
+  }
+
+  .note-title input {
+    width: 150px;
+    font-size: 1.8rem;
+  }
+
+  .todo-area {
+    padding: 10px 0 30px 0;
+  }
+
+  .note {
+    margin-left: 0;
+  }
+
+  .color-pallets {
+    top: 30vh;
+    left: 35vw;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .add-note-modal {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .add-note-modal {
+    left: 0;
+    margin-left: 4%;
+  }
+
+  .color-pallets {
+    top: 31vh;
+    left: 27vw;
+  }
+}

@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.8%;
+  font-family: 'Roboto', sans-serif;
+
+  /* Theme colors */
+  --bg: #f8f8f8;
+  --bgContent: white;
+  --borderColor: #dbdbdb;
+  --buttonBg: black;
+  --buttonTextColor: white;
+  --textColor: black;
+
+  /* Note pallet colors */
+  --green: #84eda5;
+  --blue: #64cddb;
+  --yellow: #f2f76a;
+  --red: #f7a96a;
+  --purple: #d579f7;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+}
+
+/* Header */
+
+header {
+  background-color: var(--bgContent);
+  padding: 35px;
+  box-shadow: 2px 0 5px 3px rgba(0, 0, 0, .5);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 180px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 4rem;
+  color: var(--textColor);
+}
+
+.title i {
+  color: var(--textColor);
+  transform: scale(3);
+  margin-left: 25px;
+}
+
+.theme-area {
+  margin-left: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.theme-area i {
+  transform: scale(1.5);
+  margin-right: 11px;
+  margin-top: 3px;
+}
+
+.theme-btn {
+  appearance: none;
+  width: 38px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #dbdbdb;
+  position: relative;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  cursor: pointer;
+  transition: .4s;
+}
+
+.theme-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--textColor);
+  border-radius: 50px;
+  transition: .4s;
+}
+
+.theme-btn:checked {
+  background-color: #afafaf;
+}
+
+.theme-btn:checked::after {
+  left: 18px;
+}
+
+/* Main content */
+
+.main-container {
+  background-color: var(--bgContent);
+  max-width: 70%;
+  /* width: 70%; */
+  border: 2px solid var(--borderColor);
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.add-note-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button.add-note {
+  margin-left: 15px;
+  background-color: var(--buttonBg);
+  border: none;
+  color: var(--buttonTextColor);
+  border-radius: 50px;
+  padding: 10px 20px;
+  width: 130px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: var(--textColor);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+footer ul {
+  display: flex;
+  margin-top: 15px;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer i {
+  color: var(--textColor);
+  transform: scale(1.8);
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+/* Notes container */
+
+.note-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+/* Note model */
+
+.note {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 190px;
+  height: 250px;
+  overflow: hidden;
+  /* background-color: var(--blue); */
+  border-radius: 5px;
+  border-top-right-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  position: relative;
+  transition: .3s;
+}
+
+.note:hover {
+  cursor: pointer;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+}
+
+.note h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  width: 17ch;
+}
+
+.note .action-buttons {
+  position: absolute;
+  top: 29px;
+  right: 4px;
+}
+
+.action-buttons i {
+  transform: scale(1.3);
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-list .create-todo {
+  display: flex;
+}
+
+.create-todo i {
+  color: var(--textColor);
+  transform: scale(2);
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.create-todo p {
+  color: var(--textColor);
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.todo-area {
+  margin-top: 20px;
+  overflow: hidden;
+  height: 20vh;
+  width: 90%;
+  padding: 10px 0;
+}
+
+.todo {
+  margin-bottom: 15px;
+}
+
+.todo input[type="checkbox"] {
+  transform: scale(1.3);
+  position: relative;
+  top: 1px;
+  margin-left: 2px; 
+}
+
+.todo p {
+  color: var(--textColor);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+/* Modals */
+
+.add-note-modal {
+  display: none;
+  position: absolute;
+  top: 25vh;
+  left: 33vw;
+  /* height: 350px; */
+  width: 500px;
+  background-color: var(--blue);
+  border-radius: 5px;
+  z-index: 1;
+  padding: 20px;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, .5);
+  transition: .3s;
+}
+
+.note-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-title input {
+  color: var(--textColor);
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.note-title input:focus::placeholder {
+  opacity: 0;
+}
+
+.note-title input::placeholder {
+  color: var(--textColor);
+  transition: .3s;
+  color: var(--textColor);
+}
+
+.note-title .action-buttons i {
+  color: var(--textColor);
+  transform: scale(1.8);
+  margin-right: 25px;
+}
+
+.modal-todo-list {
+  margin-top: 20px;
+}
+
+.modal-create-todo {
+  display: flex;
+  align-items: center;
+}
+
+.modal-create-todo i {
+  color: var(--textColor);
+  transform: scale(3);
+}
+
+.modal-create-todo i:hover {
+  cursor: pointer;
+}
+
+.modal-create-todo p {
+  color: var(--textColor);
+  margin-left: 20px;
+  font-size: 1.7rem;
+}
+
+.save-note {
+  position: absolute;
+  right: 35px;
+  bottom: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--buttonBg);
+  color: var(--buttonTextColor);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.color-pallets {
+  z-index: 2;
+  display: none;
+  position: absolute;
+  left: 55vw;
+  top: 22vh;
+  background-color: var(--bgContent);
+  border: 1px solid var(--borderColor);
+  height: 40px;
+  width: 223px;
+  border-radius: 50px;
+  transition: .3s;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
+}
+
+.pallet {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--borderColor);
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+  transition: .3s;
+}
+
+.pallet:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+#blue {
+  background-color: var(--blue);
+}
+
+#green {
+  background-color: var(--green);
+}
+
+#yellow {
+  background-color: var(--yellow);
+}
+
+#red {
+  background-color: var(--red);
+}
+
+#purple {
+  background-color: var(--purple);
+}
+
+div.todo input[type="text"] {
+  color: var(--textColor);
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 70%;
+  background-color: transparent;
+  border: none;
+  color: var(--textColor);
+  padding: 10px 5px 5px 5px;
+}
+
+div.todo input[type="text"]::placeholder {
+  color: var(--textColor);
+  text-decoration: underline;
+  opacity: 1;
+  transition: .3s;
+}
+
+div.todo input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+
+.modal-todo-area {
+  height: auto;
+}
+
+/* Javascript classes */
+
+.open {
+  display: block;
+  opacity: 1;
+}
+
+.checked {
+  opacity: .5;
+  text-decoration: line-through;
+}
+
+input[type="text"].checked::placeholder {
+  opacity: .5;
+  text-decoration: line-through;
+}
